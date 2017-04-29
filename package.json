@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "@wikipathways/kaavio-showdown",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Extended MarkDown syntax for Kaavio and the Manipulation API",
   "repository": "jacobwindsor/kaavio-showdown",
   "author": "Jacob Windsor",
