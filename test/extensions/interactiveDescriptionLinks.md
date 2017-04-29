@@ -28,6 +28,9 @@ K[zoom on and highlight on](zoomOn('node1') highlightOn('node1', 'red'))
 
 K[show and highlight](show('node1') highlightOn('node1', 'red'))
 
+# Double up
+K[double hide](hide('node1') hide('node2'))
+
 # Test general
 
 K[pan on one](panTo('node1')) and some text in between K[highlight](highlightOn('node1', 'red')).

@@ -69,8 +69,13 @@ export const interactiveDescriptionLinks = {
       const twoGroups = actionRegexes
         .filter(elem => ['toggleHighlight', 'highlightOn'].indexOf(elem.name) > -1)
         .filter(elem => action.match(elem.regex))
-        .map(elem => action.match(elem.regex, results =>
-          `${elem.name}(${results[1]},${results[2]})`));
+        .reduce((acc, cur) => {
+          let match;
+          while ((match = cur.regex.exec(action)) !== null) {
+            acc.push(`${cur.name}(${match[1]}, ${match[2]})`);
+          }
+          return acc;
+        }, []);
 
       // Now do those with one capture group
       // Returns e.g. [`zoomOn('node1')`,...]
@@ -78,7 +83,13 @@ export const interactiveDescriptionLinks = {
         .filter(elem => ['zoomOn', 'panTo', 'hide', 'show', 'highlightOff', 'toggleHidden']
           .indexOf(elem.name) > -1)
         .filter(elem => action.match(elem.regex))
-        .map(elem => action.match(elem.regex, results => `${elem.name}(${results[1]})`));
+        .reduce((acc, cur) => {
+          let match;
+          while ((match = cur.regex.exec(action)) !== null) {
+            acc.push(`${cur.name}(${match[1]})`);
+          }
+          return acc;
+        }, []);
 
       const fullAction = twoGroups.concat(oneGroup).reduce((acc, cur) =>
         `${acc}diagram.manipulator.${cur};`, '');
