@@ -94,8 +94,13 @@ export const interactiveDescriptionLinks = {
       const fullAction = twoGroups.concat(oneGroup).reduce((acc, cur) =>
         `${acc}diagram.manipulator.${cur};`, '');
 
+      // Always reset hidden and highlighted
+      let resets = 'diagram.manipulator.resetHighlighted();diagram.manipulator.resetHidden();';
+      if (!fullAction.includes('zoomOn') && !fullAction.includes('panTo')) {
+        resets = `${resets}diagram.manipulator.resetPan();diagram.manipulator.resetZoom();`;
+      }
       // Render the full interactive Kaavio link
       // Reset Kaavio before so each link is "self describing"
-      return `<a onclick="diagram.manipulator.reset();${fullAction}">${innerText}</a>`;
+      return `<a onclick="${resets}${fullAction}">${innerText}</a>`;
     }),
 };
