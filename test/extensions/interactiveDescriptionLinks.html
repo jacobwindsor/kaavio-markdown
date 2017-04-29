@@ -43,6 +43,18 @@
 <p>
   <a onclick="diagram.manipulator.reset();diagram.manipulator.hide('node1');diagram.manipulator.hide('node2');">double hide</a>
 </p>
+<p>
+  <a onclick="diagram.manipulator.reset();diagram.manipulator.highlightOn('node1', 'red');diagram.manipulator.highlightOn('node1', 'blue');">double highlight</a>
+</p>
+<p>
+  <a onclick="diagram.manipulator.reset();diagram.manipulator.panTo('node1');diagram.manipulator.panTo('node2');">double pan</a>
+</p>
+<p>
+  <a onclick="diagram.manipulator.reset();diagram.manipulator.hide('node1');diagram.manipulator.hide('node2');diagram.manipulator.hide('node3');">triple hide</a>
+</p>
+<p>
+  <a onclick="diagram.manipulator.reset();diagram.manipulator.hide('node1');diagram.manipulator.hide('node2');diagram.manipulator.hide('node3');diagram.manipulator.hide('node3');">quadruple hide</a>
+</p>
 <h1 id="testgeneral">Test general</h1>
 <p>
   <a onclick="diagram.manipulator.reset();diagram.manipulator.panTo('node1');">pan on one</a> and some text in between

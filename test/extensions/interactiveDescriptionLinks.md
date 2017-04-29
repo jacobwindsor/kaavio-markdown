@@ -31,6 +31,14 @@ K[show and highlight](show('node1') highlightOn('node1', 'red'))
 # Double up
 K[double hide](hide('node1') hide('node2'))
 
+K[double highlight](highlightOn('node1', 'red') highlightOn('node1', 'blue'))
+
+K[double pan](panTo('node1') panTo('node2'))
+
+K[triple hide](hide('node1') hide('node2') hide('node3'))
+
+K[quadruple hide](hide('node1') hide('node2') hide('node3') hide('node3'))
+
 # Test general
 
 K[pan on one](panTo('node1')) and some text in between K[highlight](highlightOn('node1', 'red')).
