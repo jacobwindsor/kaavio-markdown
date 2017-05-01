@@ -33,41 +33,23 @@ K[some text](operation1(params) operation2(params))
 
 ## Operations
 Each operation is written is a JavaScript like style. Those with development experience should be comfortable with this.
-### toggleHighlight
-```javascript
-toggleHighlight(entity_id: string, color: string)
-```
-e.g.:
-```javascript
-toggleHighlight('abc', 'red')
-```
-
 ### highlightOn
 ```javascript
 highlightOn(entity_id: string, color: string)
 ```
 
-### highlightOff
+e.g.:
 ```javascript
-highlightOff(entity_id: string)
-```
+highlightOn('abc', 'red')
 
 ### hide
 ```javascript
 hide(entity_id: string)
 ```
-  
-### show
-```javascript
-show(entity_id: string)
-```
-
-### toggleHidden
-```javascript
-toggleHidden(entity_id: string)
-```
 
 ### zoomOn
+You may zoom on a single entity or a group of entities (in an array). The diagram will be zoomed in so that the selected
+entities fill up as much space as possible. The diagram is also panned to the center of the selected entities.
 ```javascript
 zoomOn(entity_id(s): string | string[])
 ```
@@ -81,6 +63,7 @@ zoomOn(['abc', '123'])
 ```
   
 ### panTo
+As with zoomOn, you may pan to a single entity or a group of entities (in an array).
 ```javascript
 panTo(entity_id(s): string | string[])
 ```
