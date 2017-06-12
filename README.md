@@ -5,6 +5,7 @@
 [![Build Status](http://img.shields.io/travis/jacobwindsor/kaavio-showdown/master.svg?style=flat-square)](https://travis-ci.org/jacobwindsor/kaavio-showdown)
 [![Coverage Status](https://img.shields.io/coveralls/jacobwindsor/kaavio-showdown.svg?style=flat-square)](https://coveralls.io/jacobwindsor/kaavio-showdown)
 [![Dependency Status](http://img.shields.io/david/jacobwindsor/kaavio-showdown.svg?style=flat-square)](https://david-dm.org/jacobwindsor/kaavio-showdown)
+[![DOI](https://zenodo.org/badge/87535431.svg)](https://zenodo.org/badge/latestdoi/87535431)
 
 > Extended MardDown syntax for Kaavio and the Manipulation API
 
